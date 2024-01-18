@@ -13,7 +13,7 @@ for move in move_list:
     temp_x += move_dic[move][0]
     temp_y += move_dic[move][1]
 
-    if temp_x < 1 or temp_x >= N or temp_y <1 or temp_y <1:
+    if temp_x < 1 or temp_x > N or temp_y <1 or temp_y >N:
         continue
 
     x,y = temp_x,temp_y
