@@ -3,7 +3,7 @@ from collections import deque
 def bfs(x,y):
     queue = deque()
     queue.append((x,y))
-    count = 0
+    count = 1
     while queue:
 
         i,j = queue.pop()
