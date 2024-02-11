@@ -11,7 +11,7 @@ for i in range(M):
 def dfs(graph,v,visited):
     x = v
 
-    if visited[x] == False and graph[x]:
+    if visited[x] == False:
         visited[x] = True
 
         for y in graph[x]:
@@ -24,4 +24,4 @@ for i in range(1,N+1):
     if dfs(graph,i,visited) == True:
         result +=1
 
-print(result+visited.count(False))
+print(result)

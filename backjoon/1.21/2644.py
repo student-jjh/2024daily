@@ -22,7 +22,7 @@ def bfs(x,y,graph):
     queue = deque()
 
     queue.append(x)
-    visited[x] = 1
+    visited[x] = 0
 
     while queue:
         x = queue.popleft()

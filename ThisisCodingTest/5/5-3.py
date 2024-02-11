@@ -18,7 +18,7 @@ for i in range(coins[0] + 1,M+1):
         if i - coin < 1:
             break
 
-        elif for_answer[i-coin] == 0:
+        elif for_answer[i-coin] == 10001:
             continue
             
         for_answer[i] = min(for_answer[i],for_answer[i-coin] + 1)

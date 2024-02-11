@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(15000)
+
 N  = int(input())
 
 graph = []
@@ -13,8 +16,6 @@ def dfs(graph,v,visited,n):
 
     x,y = v
 
-
-
     if graph[x][y] > n and visited[x][y] == False :
         visited[x][y] = True
         for k in range(4):
@@ -29,7 +30,7 @@ def dfs(graph,v,visited,n):
         return True
 
     return False
-answer = []
+answer =0
 for v in range(mx+1):
 
     visited = [[False for i in range(N+1)] for j in range(N+1)]
@@ -41,7 +42,6 @@ for v in range(mx+1):
             if dfs(graph,c,visited,v) == True:
                 count +=1
 
-    answer.append(count)
+    answer = max(count,answer)
 
-answer.sort()
-print(answer[-1])
+print(answer)
