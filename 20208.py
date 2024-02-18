@@ -19,20 +19,11 @@ for i in range(N):
 
 visited = [False for _ in range(len(lst))]
 
-def possible(v,m):
-    for i in range(len(lst)):
-        if visited[i] == False:
-            if abs(lst[i][0] - v[0]) + abs(lst[i][1] - v[1]) <=m:
-                print(v,lst[i],m)
-                return True
-    return False
-
 answer = 0
 def recur(num,v,m):
     global answer
     if answer == len(lst):
         return
-    # if possible(v,m) == False:
     if abs(v[0] - start[0]) + abs(v[1] - start[1]) <= m:
         if num > answer:
             answer = num
